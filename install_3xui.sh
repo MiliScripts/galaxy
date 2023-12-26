@@ -15,6 +15,8 @@ input_1="y"
 input_2="devVpn"
 input_3="devVpn100%"
 input_4="2053"
+input_5="x-ui"
+input_6="20"
 
 # Run the installation script with predefined inputs
 bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) <<EOF
@@ -23,3 +25,7 @@ $input_2
 $input_3
 $input_4
 EOF
+
+# Run x-ui command and provide additional input
+echo -e "${green}Running x-ui command...${plain}"
+echo -e "$input_5\n$input_6" | /usr/local/x-ui/x-ui
